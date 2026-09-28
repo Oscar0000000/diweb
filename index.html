@@ -3,11 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de Oscar</title>
- 
-  <header>
-    <h1>MODULO DE DIWEB</h1>
-  </header>
+  <title>Portfolio de Oscar | DIWEB</title>
 
-  </main>
+  <!-- Fuentes de Google Fonts (Inter & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* 1. VARIABLES GLOBALES (PALETA DE COLORES OSCURA) */
+    :root {
+      --bg-color: #0f1117;       /* Fondo principal ultra oscuro */
+      --card-bg: #161b22;        /* Fondo para tarjetas/secciones */
+      --card-border: #30363d;    /* Bordes sutiles estilo GitHub */
+      --text-main: #f0f6fc;      /* Texto principal brillante */
+      --text-muted: #8b949e;     /* Texto secundario/gris */
+      --accent: #58a6ff;         /* Azul neón de acento */
+      --accent-hover: #1f6feb;   /* Azul para hover */
+      --font-body: 'Inter', sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+    }
+
+    /* 2. RESET Y ESTILOS BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    /* 3. CONTENEDOR PRINCIPAL (CENTRADOR) */
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* 4. CABECERA / HEADER */
+    header {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--font-code);
+      font-size: 0.8rem;
+      color: var(--accent);
+      background-color: rgba(88, 166, 255, 0.1);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* 5. SECCIONES GENERALES */
+    section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    /* 6. LISTA DE HABILIDADES Y TECNOLOGÍAS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .skill-tag {
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      background-color: var(--bg-color);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+    }
+
+    /* 7. REJILLA DE PROYECTOS / EJERCICIOS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .project-card {
+      background-color: var(--bg-color);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 8. PIE DE PÁGINA / FOOTER */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-family: var(--font-code);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- CABECERA PRINCIPAL -->
+    <header>
+      <span class="badge">Módulo DIWEB</span>
+      <h1>Portfolio de Oscar</h1>
+      <p>Bienvenido a mi portfolio de Diseño de Interfaces Web. En él encontrarás ejercicios, ejemplos y proyectos desarrollados durante el ciclo DAW.</p>
+    </header>
+
+    <main>
+      <!-- SOBRE EL MÓDULO & TECNOLOGÍAS -->
+      <section>
+        <h2>🛠️ Tecnologías y Herramientas</h2>
+        <p>A lo largo del curso iré maquetando y diseñando prototipos utilizando las siguientes tecnologías:</p>
+        <div class="skills-grid">
+        
+        </div>
+      </section>
+
+      <!-- PROYECTOS Y PRÁCTICAS -->
+      <section>
+        <h2>📂 Prácticas & Proyectos</h2>
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <h3>01. Planificación UX/UI</h3>
+            <p>Diseño de wireframes y prototipos interactivos en Figma.</p>
+            <a href="#" class="project-link">Ver Ejercicio ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>02. Layouts con Flexbox & Grid</h3>
+            <p>Maquetación responsive adaptada a móviles y monitores.</p>
+            <a href="#" class="project-link">Ver Ejercicio ↗</a>
+          </article>
+
+          <article class="project-card">
+            <h3>03. Frameworks CSS</h3>
+            <p>Uso de Bootstrap y utilidades para desarrollo rápido.</p>
+            <a href="#" class="project-link">Ver Ejercicio ↗</a>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2026 Oscar • Desarrollo de Aplicaciones Web (DAW)</p>
+    </footer>
+
+  </div>
+
+</body>
 </html>
