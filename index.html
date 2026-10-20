@@ -13,7 +13,7 @@
   <style>
     /* 1. VARIABLES GLOBALES (PALETA DE COLORES OSCURA) */
     :root {
-      --bg-color: #0f1117;       /* Fondo principal ultra oscuro. */
+      --bg-color: #0f1117;       /* Fondo principal ultra oscuro */
       --card-bg: #161b22;        /* Fondo para tarjetas/secciones */
       --card-border: #30363d;    /* Bordes sutiles estilo GitHub */
       --text-main: #f0f6fc;      /* Texto principal brillante */
@@ -39,7 +39,7 @@
       padding: 2rem 1rem;
     }
 
-    /* 3. CONTENEDOR PRINCIPAL (CENTRADOR) */
+    /* 3. CONTENEDOR PRINCIPAL */
     .container {
       max-width: 850px;
       margin: 0 auto;
@@ -83,7 +83,7 @@
       margin: 0 auto;
     }
 
-    /* 5. SECCIONES GENERALES */
+    /* 5. SECCIONES GENERALES Y TEMAS */
     section {
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -95,7 +95,7 @@
     section h2 {
       font-size: 1.4rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       border-bottom: 1px solid var(--card-border);
       padding-bottom: 0.5rem;
       color: var(--text-main);
@@ -119,12 +119,44 @@
       border-radius: 6px;
     }
 
-    /* 7. REJILLA DE PROYECTOS / EJERCICIOS */
+    /* 7. ESTRUCTURA DE TEMAS Y PROYECTOS */
+    .theme-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .theme-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.75rem;
+    }
+
+    .theme-badge {
+      font-family: var(--font-code);
+      font-size: 0.8rem;
+      background-color: var(--accent);
+      color: #000;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .theme-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    /* REJILLA DE PROYECTOS DENTRO DEL TEMA */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
-      margin-top: 1rem;
     }
 
     .project-card {
@@ -141,7 +173,7 @@
     }
 
     .project-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 0.5rem;
     }
 
@@ -164,7 +196,7 @@
       text-decoration: underline;
     }
 
-    /* 8. PIE DE PÁGINA / FOOTER */
+    /* 8. PIE DE PÁGINA */
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -182,7 +214,7 @@
     <header>
       <span class="badge">Módulo DIWEB</span>
       <h1>Portfolio de Oscar</h1>
-      <p>Bienvenido a mi portfolio de Diseño de Interfaces Web. En él encontrarás ejercicios, ejemplos y proyectos desarrollados durante el ciclo DAW.</p>
+      <p>Bienvenido a mi portfolio de Diseño de Interfaces Web. En él encontrarás ejercicios, ejemplos y proyectos organizados por temas desarrollados durante el curso.</p>
     </header>
 
     <main>
@@ -200,56 +232,107 @@
         </div>
       </section>
 
-      <!-- PROYECTOS Y PRÁCTICAS -->
-      <section>
-        <h2>📂 Prácticas & Proyectos</h2>
+      <!-- ==================== TEMA 1 ==================== -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <span class="theme-badge">TEMA 1</span>
+          <h2 class="theme-title">Introducción al Diseño Web e Historia</h2>
+        </div>
+
         <div class="projects-grid">
           
-          <!-- EJERCICIO 01 -->
+          <!-- Proyecto 1 del Tema 1 -->
           <article class="project-card" style="grid-column: 1 / -1;">
             <h3>01. Historia de Internet</h3>
             <p>Presentación sobre la historia de Internet interactiva diseñada en Canva.</p>
 
-            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
-              <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAHV6dtfiTc/GPhQsA9dNuWUrdmYhht5Hg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; margin-top: 1em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px;">
+              <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAHV6dtfiTc/GPhQsA9dNuWUrdmYhht5Hg/view?embed" allowfullscreen="allowfullscreen"></iframe>
             </div>
             
             <a href="https://www.canva.com/design/DAHV6dtfiTc/GPhQsA9dNuWUrdmYhht5Hg/view?utm_content=DAHV6dtfiTc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="project-link">Hitos de la Web en Canva ↗</a>
           </article>
 
-          <!-- EJERCICIO 02 -->
+          <!-- Proyecto 2 del Tema 1 -->
           <article class="project-card">
             <h3>02. El diseño web en la actualidad</h3>
             <p>Documento del ejercicio redactado en Word y exportado a PDF.</p>
-  
             <a href="https://drive.google.com/file/d/1jUkjvLG0Ak9WyNHF96f7BeFq7KXp5R-X/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
               📄 Ver Ejercicio en PDF ↗
             </a>
           </article>
+
+        </div>
+      </div>
+
+
+      <!-- ==================== TEMA 2 ==================== -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <span class="theme-badge">TEMA 2</span>
+          <h2 class="theme-title">Planificación y Prototipado UX/UI</h2>
+        </div>
+
+        <div class="projects-grid">
           
-          <!-- EJERCICIO 03 -->
+          <!-- Proyecto 1 del Tema 2 -->
           <article class="project-card">
-            <h3>03. Planificación UX/UI</h3>
-            <p>Diseño de wireframes y prototipos interactivos en Figma.</p>
-            <a href="#" class="project-link">Ver Ejercicio ↗</a>
+            <h3>03. Componentes Estructurales</h3>
+            <p>Tabla con componentes estructurales</p>
+            <a href="https://drive.google.com/file/d/1XSvVQbbe24VNZu1ozzf2onXozuYOJZ_R/view?usp=sharing" class="project-link">Ver Ejercicio en PDF ↗</a>
           </article>
 
-          <!-- EJERCICIO 04 -->
+           <!-- Proyecto 2 del Tema 2 -->
+           <article class="project-card">
+            <h3>03. Componentes Estructurales en Navegador</h3>
+            <p>Documento web con elementos</p>
+            <a href="https://drive.google.com/file/d/1rQASjc2bSQYMOa-mm0h4KJtgwrHYRLy-/view?usp=sharing" class="project-link">Ver Ejercicio ↗</a>
+          </article>
+
+
+
+           <!-- Proyecto 3 del Tema 2 -->
+           <article class="project-card">
+            <h3>03. Componentes Estructurales en Navegador</h3>
+            <p>Documento web con elementos</p>
+            <a href="https://drive.google.com/file/d/1uGXENGOuqmzugWQJdwUl3ntycuIKyIy3/view?usp=drive_link" class="project-link">Ver Ejercicio ↗</a>
+          </article>
+
+
+
+          
+        </div>
+      </div>
+
+
+      <!-- ==================== TEMA 3 ==================== -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <span class="theme-badge">TEMA 3</span>
+          <h2 class="theme-title">Maquetación Avanzada con CSS</h2>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Proyecto 1 del Tema 3 -->
           <article class="project-card">
             <h3>04. Layouts con Flexbox & Grid</h3>
             <p>Maquetación responsive adaptada a móviles y monitores.</p>
             <a href="#" class="project-link">Ver Ejercicio ↗</a>
           </article>
 
-          <!-- EJERCICIO 05 -->
+          <!-- Proyecto 2 del Tema 3 -->
           <article class="project-card">
-            <h3>05. Frameworks CSS</h3>
-            <p>Uso de Bootstrap y utilidades para desarrollo rápido.</p>
-            <a href="#" class="project-link">Ver Ejercicio ↗</a>
+            <h3>05. Proyecto Restaurante</h3>
+            <p>Prototipo de pagina web sin funcionar botones.</p>
+            <a href="https://www.figma.com/proto/8K8dsoyiMzKllONVTYJ61p/Sin-t%C3%ADtulo?node-id=2-4290&p=f&t=cZ9uDvxiJ8U17oTL-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="project-link">Ver Ejercicio ↗</a>
+            <p></p>
+          
           </article>
 
         </div>
-      </section>
+      </div>
+
     </main>
 
     <!-- PIE DE PÁGINA -->
