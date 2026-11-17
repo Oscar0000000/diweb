@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Plantilla</title>
+</head>
+<body>
+	<header>
+		<h1>Nombre del sitio</h1>
+		<p>Texto breve de presentación</p>
+	</header>
+
+	<nav aria-label="Navegación principal">
+		<a href="index.html">Inicio</a>
+		<a href="contactos.html">Contenido</a>
+		<a href="noticias.html">Contacto</a>
+	</nav>
+
+	<div class="layout" id="inicio">
+		<main id="contenido">
+			<h2>Contenido principal</h2>
+			<p>Añade aquí el contenido de la página.</p>
+		</main>
+		<aside>
+			<h2>Barra lateral</h2>
+			<p>Información complementaria.</p>
+		</aside>
+	</div>
+        <iframe 
+            src="https://www.youtube.com/shorts/CRS9CiqbrKw" 
+            width="100%" 
+            height="400" 
+            title="Sitio incrustado de Hasbullah"
+            style="border: 1px solid #ccc;"
+            loading="lazy">
+            
+        ></iframe>
+
+	<footer id="contacto">
+		<p>&copy; 2025 Nombre del sitio</p>
+	</footer>
+
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; font-family: Arial, sans-serif; color: #222; }
+		header, nav, main, aside, footer { padding: 1rem; }
+		header, footer { background: #243b53; color: white; }
+		nav { display: flex; gap: 1rem; background: #e8eef4; }
+		nav a { color: #243b53; text-decoration: none; }
+		.layout { display: grid; grid-template-columns: 3fr 1fr; gap: 1rem; padding: 1rem; }
+		main, aside { background: #f5f7fa; }
+		footer { text-align: center; }
+		@media (max-width: 600px) {
+			.layout { grid-template-columns: 1fr; }
+			nav { flex-wrap: wrap; }
+		}
+	</style>
+</body>
+</html>
