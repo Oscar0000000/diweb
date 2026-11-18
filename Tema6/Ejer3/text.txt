@@ -1,0 +1,32 @@
+1. ¿De qué color aparece el título?
+
+Aparece de color verde, porque el estilo interno (<style>) prevalece sobre el estilo externo (estilos.css) cuando tienen la misma especificidad.
+
+2. ¿Qué tamaño tiene el título?
+
+Tiene un tamaño de 30 píxeles, porque el estilo interno solo modifica el color, pero no el tamaño. Por tanto, conserva el tamaño establecido en la hoja externa.
+
+3. ¿De qué color aparece el primer párrafo?
+
+Aparece de color naranja, porque el estilo interno prevalece sobre el externo.
+
+4. ¿De qué color aparece el segundo párrafo?
+
+Aparece de color rojo, porque tiene un estilo en línea (style="color: red;"), que prevalece sobre los estilos internos y externos en este caso.
+5. Modifica el HTML para que el título aparezca en negro utilizando un estilo en línea.
+
+Debemos añadir style="color: black;" a la etiqueta <h1>.
+<h1 style="color: black;">Mi página web</h1>
+
+
+El título aparecerá en negro porque el estilo en línea prevalece sobre las reglas externas e internas.
+
+6. Elimina los estilos internos. ¿Qué sucede con los colores?
+
+Al eliminar la etiqueta <style>, desaparecen las reglas CSS internas.
+
+Los resultados serían:
+Elemento	Color final	Motivo
+Título (h1)	Azul	Se aplica estilos.css
+Primer párrafo (p)	Negro	Se aplica estilos.css
+Segundo párrafo (p)	Rojo	Mantiene su estilo en línea
