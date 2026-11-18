@@ -1,0 +1,21 @@
+
+/* DISEÑO OSCURO */
+
+body {
+    background-color: #333333;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    color: lightblue;
+}
+
+h2 {
+    color: lightyellow;
+}
+
+p {
+    color: white;
+}
